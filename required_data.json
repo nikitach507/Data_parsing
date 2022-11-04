@@ -65,6 +65,45 @@
         ]
     },
     {
+        "name": "fastkafka-at-2006",
+        "cpu": 0,
+        "memory": 76591104,
+        "created_at": 1591473519.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.164.107",
+            "fd87:1cf1:9a65:0:216:3eff:fe7d:7fc9",
+            "fd97:522f:fa6:0:216:3eff:fe7d:7fc9",
+            "fd00:10:17:a0:fdf9:f5e6:51bc:99ef",
+            "fd00:10:17:a0:216:3eff:fe7d:7fc9",
+            "fe80::216:3eff:fe7d:7fc9"
+        ],
+        "ip_docker0": []
+    },
+    {
+        "name": "ftp-test",
+        "cpu": 0,
+        "memory": 57446400,
+        "created_at": 1570711371.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.170.231",
+            "fd87:1cf1:9a65:0:216:3eff:fe4d:1dda",
+            "fd97:522f:fa6:0:216:3eff:fe4d:1dda",
+            "fd00:10:17:a0:216:3eff:fe4d:1dda",
+            "fe80::216:3eff:fe4d:1dda"
+        ],
+        "ip_docker0": []
+    },
+    {
         "name": "genie-docker-test",
         "cpu": 0,
         "memory": 632188928,
@@ -153,6 +192,26 @@
         ]
     },
     {
+        "name": "scep-testing",
+        "cpu": 0,
+        "memory": 123838464,
+        "created_at": 1591714302.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.167.80",
+            "fd87:1cf1:9a65:0:216:3eff:fe02:b013",
+            "fd97:522f:fa6:0:216:3eff:fe02:b013",
+            "fd00:10:17:a0:21cd:463e:8e0:956",
+            "fd00:10:17:a0:216:3eff:fe02:b013",
+            "fe80::216:3eff:fe02:b013"
+        ],
+        "ip_docker0": []
+    },
+    {
         "name": "seacat-pki-test",
         "cpu": 0,
         "memory": 411295744,
@@ -175,6 +234,63 @@
         ]
     },
     {
+        "name": "teskalabs-apm",
+        "cpu": 0,
+        "memory": 667648,
+        "created_at": 1566580588.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.162.236",
+            "fd87:1cf1:9a65:0:216:3eff:fecb:b502",
+            "fd97:522f:fa6:0:216:3eff:fecb:b502",
+            "fd00:10:17:a0:216:3eff:fecb:b502",
+            "fe80::216:3eff:fecb:b502"
+        ],
+        "ip_docker0": []
+    },
+    {
+        "name": "tlbackup-server",
+        "cpu": 0,
+        "memory": 27820032,
+        "created_at": 1566216511.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.165.109",
+            "fd87:1cf1:9a65:0:216:3eff:fec9:5224",
+            "fd97:522f:fa6:0:216:3eff:fec9:5224",
+            "fd00:10:17:a0:216:3eff:fec9:5224",
+            "fe80::216:3eff:fec9:5224"
+        ],
+        "ip_docker0": []
+    },
+    {
+        "name": "wiki-test",
+        "cpu": 0,
+        "memory": 1527808,
+        "created_at": 1571752274.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.165.138",
+            "fd87:1cf1:9a65:0:216:3eff:fe4a:babb",
+            "fd97:522f:fa6:0:216:3eff:fe4a:babb",
+            "fd00:10:17:a0:216:3eff:fe4a:babb",
+            "fe80::216:3eff:fe4a:babb"
+        ],
+        "ip_docker0": []
+    },
+    {
         "name": "zookeeper-ui",
         "cpu": 0,
         "memory": 698519552,
@@ -195,5 +311,24 @@
             "172.17.0.1",
             "fe80::42:80ff:feb5:861e"
         ]
+    },
+    {
+        "name": "zzz-mautic-test",
+        "cpu": 0,
+        "memory": 45236224,
+        "created_at": 1574342203.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "fd87:1cf1:9a65:0:216:3eff:feec:8db",
+            "fd97:522f:fa6:0:216:3eff:feec:8db",
+            "fd00:10:17:a0:f8f6:a9fa:ae2:257f",
+            "fd00:10:17:a0:216:3eff:feec:8db",
+            "fe80::216:3eff:feec:8db"
+        ],
+        "ip_docker0": []
     }
 ]
