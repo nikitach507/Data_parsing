@@ -1,0 +1,199 @@
+[
+    {
+        "name": "Mobile-applications-UI-test",
+        "cpu": 0,
+        "memory": 52985856,
+        "created_at": 1589905387.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.170.111",
+            "fd87:1cf1:9a65:0:216:3eff:fef1:d3b2",
+            "fd97:522f:fa6:0:216:3eff:fef1:d3b2",
+            "fd00:10:17:a0:216:3eff:fef1:d3b2",
+            "fe80::216:3eff:fef1:d3b2"
+        ],
+        "ip_docker0": [
+            "172.17.0.1",
+            "fe80::42:3cff:feb4:a553"
+        ]
+    },
+    {
+        "name": "docker-logman-prod-env",
+        "cpu": 0,
+        "memory": 763113472,
+        "created_at": 1591978365.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.168.70",
+            "fd87:1cf1:9a65:0:216:3eff:fef3:8cb6",
+            "fd97:522f:fa6:0:216:3eff:fef3:8cb6",
+            "fd00:10:17:a0:216:3eff:fef3:8cb6",
+            "fe80::216:3eff:fef3:8cb6"
+        ],
+        "ip_docker0": [
+            "172.17.0.1"
+        ]
+    },
+    {
+        "name": "ecr-messenger-test",
+        "cpu": 0,
+        "memory": 2099625984,
+        "created_at": 1584105466.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.168.114",
+            "fd87:1cf1:9a65:0:216:3eff:feaa:bc35",
+            "fd97:522f:fa6:0:216:3eff:feaa:bc35",
+            "fd00:10:17:a0:216:3eff:feaa:bc35",
+            "fe80::216:3eff:feaa:bc35"
+        ],
+        "ip_docker0": [
+            "172.17.0.1",
+            "fe80::42:f5ff:fe7d:bcb1"
+        ]
+    },
+    {
+        "name": "genie-docker-test",
+        "cpu": 0,
+        "memory": 632188928,
+        "created_at": 1589467800.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.161.11",
+            "fd87:1cf1:9a65:0:216:3eff:fec8:12b",
+            "fd97:522f:fa6:0:216:3eff:fec8:12b",
+            "fd00:10:17:a0:216:3eff:fec8:12b",
+            "fe80::216:3eff:fec8:12b"
+        ],
+        "ip_docker0": [
+            "172.17.0.1",
+            "fe80::42:94ff:fee9:1e49"
+        ]
+    },
+    {
+        "name": "gitlab-ci-runner-test",
+        "cpu": 0,
+        "memory": 86732800,
+        "created_at": 1591620016.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.161.22",
+            "fd87:1cf1:9a65:0:216:3eff:fe22:7dcf",
+            "fd97:522f:fa6:0:216:3eff:fe22:7dcf",
+            "fd00:10:17:a0:216:3eff:fe22:7dcf",
+            "fe80::216:3eff:fe22:7dcf"
+        ],
+        "ip_docker0": [
+            "172.17.0.1",
+            "fe80::42:daff:fe23:46ab"
+        ]
+    },
+    {
+        "name": "kafka-ui",
+        "cpu": 0,
+        "memory": 190758912,
+        "created_at": 1593018205.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.164.96",
+            "fd87:1cf1:9a65:0:216:3eff:fe45:b27c",
+            "fd97:522f:fa6:0:216:3eff:fe45:b27c",
+            "fd00:10:17:a0:216:3eff:fe45:b27c",
+            "fe80::216:3eff:fe45:b27c"
+        ],
+        "ip_docker0": [
+            "172.17.0.1",
+            "fe80::42:deff:fe97:f7b7"
+        ]
+    },
+    {
+        "name": "lmio-deploy-single-test",
+        "cpu": 0,
+        "memory": 55820288,
+        "created_at": 1590410743.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.166.22",
+            "fd87:1cf1:9a65:0:216:3eff:fe9e:1fc",
+            "fd97:522f:fa6:0:216:3eff:fe9e:1fc",
+            "fd00:10:17:a0:216:3eff:fe9e:1fc",
+            "fe80::216:3eff:fe9e:1fc"
+        ],
+        "ip_docker0": [
+            "172.17.0.1",
+            "fe80::42:70ff:fec4:a6d8"
+        ]
+    },
+    {
+        "name": "seacat-pki-test",
+        "cpu": 0,
+        "memory": 411295744,
+        "created_at": 1587038826.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.169.13",
+            "fd87:1cf1:9a65:0:216:3eff:fee1:d708",
+            "fd97:522f:fa6:0:216:3eff:fee1:d708",
+            "fd00:10:17:a0:216:3eff:fee1:d708",
+            "fe80::216:3eff:fee1:d708"
+        ],
+        "ip_docker0": [
+            "172.17.0.1",
+            "fe80::42:acff:fe70:7cff"
+        ]
+    },
+    {
+        "name": "zookeeper-ui",
+        "cpu": 0,
+        "memory": 698519552,
+        "created_at": 1583933893.0,
+        "status": "Running",
+        "ip_lo": [
+            "127.0.0.1",
+            "::1"
+        ],
+        "ip_eth0": [
+            "10.17.164.94",
+            "fd87:1cf1:9a65:0:216:3eff:feb4:c5db",
+            "fd97:522f:fa6:0:216:3eff:feb4:c5db",
+            "fd00:10:17:a0:216:3eff:feb4:c5db",
+            "fe80::216:3eff:feb4:c5db"
+        ],
+        "ip_docker0": [
+            "172.17.0.1",
+            "fe80::42:80ff:feb5:861e"
+        ]
+    }
+]
