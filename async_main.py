@@ -2,46 +2,15 @@ import json
 import time
 from datetime import datetime, timezone
 import psycopg2
+import asyncio
 
 
 start_time = time.time()
-# json file upload
-with open("sample-data.json", 'r', encoding='utf-8') as file:
-    container_data = json.load(file)
-
-# dictionary for the desired data from the file
 required_data = []
 
-number_of_containers = 1
 
-# connect the code to the database
-global connection
-try:
-    connection = psycopg2.connect(
-        database="postgres",
-        user="postgres",
-        password="super_secure_password_987",
-        host="0.0.0.0"
-    )
-    connection.autocommit = True
-
-    # creating a table
-    with connection.cursor() as cursor:
-        cursor.execute(
-            """CREATE TABLE data_container(
-                id serial PRIMARY KEY,
-                name_container varchar(50) NOT NULL,
-                cpu varchar(2) NOT NULL,
-                memory varchar(15) NOT NULL,
-                created_at varchar(12) NOT NULL,
-                status varchar(15) NOT NULL,
-                ip_lo varchar(50),
-                ip_eth0 varchar(350),
-                ip_docker0 varchar(60));
-                """
-        )
-
-        print("[INFO] Table created successfully")
+async def get_data(container_data, connection):
+    number_of_containers = 1
 
     for step in container_data:
         # find and convert human date to UTC
@@ -100,23 +69,62 @@ try:
                 )
             print(f" [+] Processed container: {number_of_containers}")
             number_of_containers += 1
-
         except TypeError:
             pass
-    print(f"[INFO] The database 'data_container' has been created")
 
-    # data output to another json file for transfer to the database
+
+async def gather():
+    global connection
+    try:
+        connection = psycopg2.connect(
+            database="postgres",
+            user="postgres",
+            password="super_secure_password_987",
+            host="0.0.0.0"
+        )
+        connection.autocommit = True
+
+        # creating a table
+        with connection.cursor() as cursor:
+            cursor.execute(
+                """CREATE TABLE data_container(
+                    id serial PRIMARY KEY,
+                    name_container varchar(50) NOT NULL,
+                    cpu varchar(2) NOT NULL,
+                    memory varchar(15) NOT NULL,
+                    created_at varchar(12) NOT NULL,
+                    status varchar(15) NOT NULL,
+                    ip_lo varchar(50),
+                    ip_eth0 varchar(350),
+                    ip_docker0 varchar(60));
+                    """
+            )
+
+            print("[INFO] Table created successfully")
+
+        with open("sample-data.json", 'r', encoding='utf-8') as file:
+            container_data = json.load(file)
+
+            await asyncio.create_task(get_data(container_data, connection))
+
+    except Exception as ex:
+        print("[INFO] Error while working with PostgreSql", ex)
+    # termination of the connection
+    finally:
+        if connection:
+            connection.close()
+            print("[INFO] PostgreSQL connection closed")
+
+
+def main():
+    asyncio.run(gather())
     with open("required_data.json", "a") as file:
         json.dump(required_data, file, indent=4, ensure_ascii=False)
         print(f"[INFO] required_data.json has been created")
 
-# in case of error
-except Exception as ex:
-    print("[INFO] Error while working with PostgreSql", ex)
-# termination of the connection
-finally:
-    if connection:
-        connection.close()
-        print("[INFO] PostgreSQL connection closed")
-        finish_time = time.time() - start_time
-        print(f"Time spent working: {finish_time}")
+    finish_time = time.time() - start_time
+    print(f"Time spent working: {finish_time}")
+
+
+if __name__ == "__main__":
+    main()
