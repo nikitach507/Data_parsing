@@ -80,7 +80,7 @@ async def gather():
             database="postgres",
             user="postgres",
             password="super_secure_password_987",
-            host="0.0.0.0"
+            host="127.0.0.1"
         )
         connection.autocommit = True
 

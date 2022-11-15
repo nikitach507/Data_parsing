@@ -1,12 +1,13 @@
-FROM python:alpine
-
-ADD . /app
-
-RUN pip install psycopg2-binary
+FROM python:latest
 
 WORKDIR /app
 
-COPY sample-data.json .
-COPY main.py .
+COPY main.py /app
+COPY sample-data.json /app
 
-CMD ["python", "./main.py"]
+
+RUN apt-get -y update && apt-get -y upgrade
+
+RUN pip install psycopg2-binary
+
+CMD ["python3", "main.py"]

@@ -15,20 +15,21 @@ required_data = []
 number_of_containers = 1
 
 # connect the code to the database
-global connection
+connection = psycopg2.connect(
+    dbname="postgres",
+    user="postgres",
+    password=12345,
+    host="0.0.0.0",
+    port=5432
+)
+
 try:
-    connection = psycopg2.connect(
-        database="postgres",
-        user="postgres",
-        password="super_secure_password_987",
-        host="0.0.0.0"
-    )
     connection.autocommit = True
 
     # creating a table
     with connection.cursor() as cursor:
         cursor.execute(
-            """CREATE TABLE data_container(
+            """CREATE TABLE IF NOT EXISTS data_container(
                 id serial PRIMARY KEY,
                 name_container varchar(50) NOT NULL,
                 cpu varchar(2) NOT NULL,
@@ -88,7 +89,7 @@ try:
             with connection.cursor() as cursor:
                 cursor.execute(
                     f"""INSERT INTO data_container VALUES (
-                        '{number_of_containers}',
+                        '%s',
                         '{step['name']}',
                         '{step['state']['cpu']['usage']}',
                         '{step['state']['memory']['usage']}',
@@ -96,7 +97,7 @@ try:
                         '{step['state']['status']}',
                         '{" / ".join(list_lo)}',
                         '{" / ".join(list_eth0)}',
-                        '{" / ".join(list_docker0)}')"""
+                        '{" / ".join(list_docker0)}')""", number_of_containers
                 )
             print(f" [+] Processed container: {number_of_containers}")
             number_of_containers += 1
